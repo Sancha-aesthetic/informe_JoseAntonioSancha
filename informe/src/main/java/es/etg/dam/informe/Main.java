@@ -6,7 +6,6 @@ public class Main {
     private static final String LAZNZARC = "Lanzando comando";
     private static final String SALIDAC = "Salida del comando '%s':\n\n%s\n\n";
 
-
     public static void main(String[] args) {
 
         Comando comando = new Comando();
@@ -18,11 +17,11 @@ public class Main {
             String resultado = comando.ejecutarComando(cmd);
             System.out.println(resultado);
 
-            String textoInforme = String.format(SALIDAC , cmd, resultado);
+            String textoInforme = String.format(SALIDAC, cmd, resultado);
             creadorInforme.agregarContenido(textoInforme);
         }
 
         creadorInforme.guardarArchivo();
-        System.out.println( GeneradorMD.RUTA_INFORME);
+        System.out.println(GeneradorMD.INFORME);
     }
 }

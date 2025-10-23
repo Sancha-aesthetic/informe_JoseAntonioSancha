@@ -7,6 +7,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 public class Comando {
+
     private static final String ERRORINFORME = "Error al crear o guardar el informe.";
     public static final String MENSAJE_ERROR = "Fallo al ejecutar el comando: ";
 

@@ -22,6 +22,13 @@
 ## CODIGO ARCHIVOS
 ---
 ### Main
+1. Recorre la lista de comandos.
+
+1. Ejecuta cada comando con la clase Comando.
+
+1. Guarda la salida formateada en un informe usando GeneradorMD.
+
+1. Al final, guarda el archivo y muestra su ruta.
 ```java 
         package es.etg.dam.informe;
 
@@ -55,6 +62,28 @@
 ---
 
 ### Comando
+- **ejecutarComando**
+1. Usa Runtime.getRuntime().exec(orden) para lanzar el comando del sistema.
+
+1. Crea un *BufferedReader* para leer la salida estándar del comando.
+
+1. Guarda cada línea leída en un *StringBuilder*.
+
+1. Espera a que el proceso termine.
+
+1. Si hay un **error** devuelve un **mensaje** indicando el fallo.
+
+1. Devuelve la salida del comando como un String.
+
+- **escribirInforme**
+1. Crea un archivo en la ruta indicada.
+
+1. Escribe el texto recibido como parámetro.
+
+1. Cierra el archivo.
+
+1. Si ocurre un **error** al guardar *muestra el mensaje*
+
 ``` java
         package es.etg.dam.informe;
 
@@ -107,6 +136,16 @@
 ```
 ---
 ### GeneradorMD
+1. Crea y guarda un archivo Markdown .
+
+1. Va acumulando texto en un **StringBuilder**ss.
+
+1. Uso *agregarContenido()* para añadir información.
+
+1. Con *guardarArchivo()* escribe todo en el archivo.
+
+1. Si hay un error al guardar muestra un mensaje.
+
 ```java
         package es.etg.dam.informe;
 
